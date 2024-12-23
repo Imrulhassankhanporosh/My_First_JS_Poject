@@ -1,10 +1,35 @@
+<!--Take the solution of the previous task Show an alert. Modify it by extracting the script content into
+ an external file main.js, residing in the same folder.-->
+
+<!--Open the page, ensure that the alert works.-->
+
+
 <html>
 
 <body>
 
+<!--If we have a lot of JavaScript code, we can put it into a separate file.-->
+
+<!--Script files are attached to HTML with the src attribute:-->
+
+<!--If your script.js file is in the same folder as your HTML file:-->
 <script src="main.js">
 
+    alert("Hello World ignored!");  // the content is ignored, because src is set
+
 </script>
+
+<!-- Use this when the script is hosted on a server or a Content Delivery Network (CDN)-->
+    <!--<script src="https://example.com/js/script.js"></script>-->
+
+<!--We must choose either an external <script src="…"> or a regular <script> with code.-->
+<!--The example above can be split into two scripts to work-->
+
+<script>
+    alert("Hello World!");
+</script>
+
+<script src="main.js"></script>
 
 </body>
 
